@@ -74,17 +74,17 @@ Below is a suggested sequence for completing this task:
 
 (If you don't need hand-holding, feel free to ignore the suggestions. For an even more complex challenge, delete the contents of the App component and implement the form entirely from scratch. The only requirement is that the functionality of your form matches that of the mock.)
 
-1. Create a state to track the values of the form. This state could be an object with `username`, `favLanguage`, `favFood`, and `agreement` keys.
+1.$ Create a state to track the values of the form. This state could be an object with `username`, `favLanguage`, `favFood`, and `agreement` keys.
 
-2. Create states to store the success and failure messages from the server.
+2.$ Create states to store the success and failure messages from the server.
 
-3. Fix the JSX to wire the change and submit handlers. Render the success and failure messages, taking them from their corresponding states, using curly braces.
+3.$ Fix the JSX to wire the change and submit handlers. Render the success and failure messages, taking them from their corresponding states, using curly braces.
 
-4. Implement the change handler without any validation. The same handler should work for all inputs, with minor adjustments if the type is "checkbox".
+4.$ Implement the change handler without any validation. The same handler should work for all inputs, with minor adjustments if the type is "checkbox".
 
-5. Implement the submit handler: POST the form to the endpoint and store proper success and error messages in their proper states. Clear the form in the case of success.
+5.$ Implement the submit handler: POST the form to the endpoint and store proper success and error messages in their proper states. Clear the form in the case of success.
 
-6. You should have a functional form that relies on back-end validation only, without any frontend validation to help the user.
+6.$ You should have a functional form that relies on back-end validation only, without any frontend validation to help the user.
 
 #### 👉 TASK 2 - Implement frontend validation using Yup
 
@@ -92,13 +92,13 @@ The frontend could be doing a lot more to prevent the user from POSTing data tha
 
 Here is a suggested sequence:
 
-1. Create a state to hold validation errors for all inputs. Create another state to track whether submitting the form is disabled or not.
+1.$ Create a state to hold validation errors for all inputs. Create another state to track whether submitting the form is disabled or not.
 
-2. Build a schema using Yup to validate the state of the form. Use the provided dictionary of error messages to guide you.
+2.$ Build a schema using Yup to validate the state of the form. Use the provided dictionary of error messages to guide you.
 
-3. In the JSX code, use the submit input's `disabled` property to update the state variable that monitors if the form is submittable.
+3.$ In the JSX code, use the submit input's `disabled` property to update the state variable that monitors if the form is submittable.
 
-4. Create an effect that triggers if the form's state changes. When it does change, run validation on the whole form and update whether the user can submit it.
+4.$ Create an effect that triggers if the form's state changes. When it does change, run validation on the whole form and update whether the user can submit it.
 
 5. Edit the change handler so that validation runs on the changed field (e.g., `favFood`). Update the corresponding validation error in the component state.
 
